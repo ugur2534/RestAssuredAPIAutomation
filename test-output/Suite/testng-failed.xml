@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.testCases.TestNGFrameworkAPI">
+        <methods>
+          <include name="getTest"/>
+          <include name="beforemethod"/>
+          <include name="posttest"/>
+          <include name="beforesuit"/>
+          <include name="sfterSuite"/>
+          <include name="putTest"/>
+          <include name="patchTest"/>
+          <include name="aftermethod"/>
+          <include name="deleteTest"/>
+        </methods>
+      </class> <!-- com.testCases.TestNGFrameworkAPI -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
