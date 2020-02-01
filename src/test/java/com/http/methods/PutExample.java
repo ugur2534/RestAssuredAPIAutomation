@@ -1,4 +1,4 @@
-package com.post.delete.put;
+package com.http.methods;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,20 +11,18 @@ import io.restassured.specification.RequestSpecification;
 
 public class PutExample {
 
-	
-	
 	@Test
 	public void test1() {
 		RequestSpecification request = RestAssured.given();
 		request.header("Content-type","application/json");
 
 		JsonObject json= new JsonObject();
-		json.addProperty("id", "3");
-		json.addProperty("title", "Smart tech IT Solution");
-		json.addProperty("author", "Sarower");
+		json.addProperty("id", "100");
+		json.addProperty("Name", "Smart tech IT Solution");
+		
 		
 		request.body(json.toString());
-		Response response = request.put("http://localhost:3000/posts/3");
+		Response response = request.put("http://localhost:3000/posts/100");
 		
 		int statuscode=response.getStatusCode();
 		System.out.println(statuscode);

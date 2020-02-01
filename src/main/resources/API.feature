@@ -17,7 +17,7 @@ Scenario Outline: Successful API method tesing
 	And Verify city name is New York 
 	And Verify city name Las Vagus is not there 
 	When Update  city name to Arizona 
-	Then validate update status code is 200 
+	Then validate update status code is 200
 	When Detele the json weather data 
 	Then User able to validate delete status code is 200 
 	

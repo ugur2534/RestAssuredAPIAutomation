@@ -1,4 +1,4 @@
-package com.post.delete.put;
+package com.http.methods;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,7 +16,7 @@ public class DeleteExample {
 		
 		RequestSpecification request = RestAssured.given();
 		
-		Response response = request.delete("http://localhost:3000/posts/1");
+		Response response = request.delete("http://localhost:3000/posts/100");
 		
 		int statuscode=response.getStatusCode();
 		System.out.println(statuscode);
