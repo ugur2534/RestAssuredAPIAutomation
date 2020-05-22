@@ -8,8 +8,8 @@ public class ResponseBody {
 	public static void main(String[] args) {
 		Response response=RestAssured.get("https://samples.openweathermap.org/data/2.5/weather?q=london,us&appid=25e4fc6e6b2e357a177262c7005");
 		
-		System.out.println(response.getBody().prettyPrint());
-		//System.out.println(response.getBody().asString());
+		//System.out.println(response.getBody().prettyPrint());
+		System.out.println(response.getBody().asString());
 		
 	}
 

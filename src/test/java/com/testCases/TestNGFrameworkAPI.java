@@ -28,8 +28,9 @@ public class TestNGFrameworkAPI extends ExtendsReport{
 	@Test(dependsOnMethods = { "getTest" })
 	public void posttest() {
 		
-		RequestSpecification request = RestAssured.given();
-		request.header("Content-type","application/json");
+		RequestSpecification request=RestAssured.given();
+		
+		
 
 		JsonObject json= new JsonObject();
 		json.addProperty("id", "22");
@@ -39,6 +40,14 @@ public class TestNGFrameworkAPI extends ExtendsReport{
 		request.body(json.toString());
 		Response response = request.post("http://localhost:3000/posts");
 		
+		
+	System.out.println("****************************************************");
+	
+	RequestSpecification header=request.header("Content-type","application/json");
+	
+	Assert.assertEquals(header, "Content-type","application/json");
+	
+	
 		int statuscode=response.getStatusCode();
 		System.out.println(statuscode);
 		
@@ -55,6 +64,7 @@ public class TestNGFrameworkAPI extends ExtendsReport{
 		json.addProperty("author", "Ahmmed");
 		
 		request.body(json.toString());
+		
 		Response response = request.put("http://localhost:3000/posts/22");
 		
 		int statuscode=response.getStatusCode();

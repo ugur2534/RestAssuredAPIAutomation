@@ -11,7 +11,7 @@ public class BDDApproachLogs {
 	@Test
 	public void test1() {
 
-		//RestAssured.baseURI = "http://localhost:3000/posts";
+		RestAssured.baseURI = "http://localhost:3000/posts";
 
 		RestAssured.given()
 		.log()
